@@ -3,16 +3,16 @@ import { useEffect } from "react";
 import { Params } from "react-router-dom";
 
 
-const RandomPkmnCard = ({pokeData}) => {
-    console.log(pokeData.sprites.front_default)
+const RandomPkmnCard = ({pokeData1}) => {
+    console.log(pokeData1.sprites.front_default)
 
     // testing commit
     return(
         <div>
             <div className="randomCard">
-                <h2>{pokeData.id}</h2>
-                <img src={pokeData.sprites.front_default} alt={pokeData.name} />
-                <h2>{pokeData.name}</h2>
+                <h2>{pokeData1.id}</h2>
+                <img src={pokeData1.sprites.front_default} alt={pokeData1.name} />
+                <h2>{pokeData1.name}</h2>
             </div>
         </div>
     )

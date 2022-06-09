@@ -1,9 +1,9 @@
 import React from "react";
 
 
-const Pokemon = ({pokeData}) => {
+const Pokemon = ({pokeData1}) => {
 
-    const ability = pokeData.abilities.map(poke =>{
+    const ability = pokeData1.abilities.map(poke =>{
         return(
             <>
             <div>{poke.ability.name}</div>
@@ -11,7 +11,7 @@ const Pokemon = ({pokeData}) => {
         )
     })
 
-    const stats = pokeData.stats.map(poke =>{
+    const stats = pokeData1.stats.map(poke =>{
         return(
             <div>{poke.stat.name}:{poke.base_stat}</div>
         )
@@ -20,10 +20,10 @@ const Pokemon = ({pokeData}) => {
 
     return(
         <div>
-            <h1>{pokeData.name}</h1>
-            {/* <img className="pkmnImg" src={pokeData.sprites.front_default} />  */}
+            <h1>{pokeData1.name}</h1>
+            {/* <img className="pkmnImg" src={pokeData1.sprites.front_default} />  */}
 
-            <img className="pkmnImg" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeData.id}.png`} />
+            <img className="pkmnImg" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeData1.id}.png`} />
 
             <div className="group">
                 <div>

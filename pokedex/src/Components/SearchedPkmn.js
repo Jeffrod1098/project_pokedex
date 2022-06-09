@@ -26,7 +26,7 @@ const SearchedPkmn = ({sPokeData}) => {
 
             <div className="group">
                 <div>
-                    <h2>ability</h2>
+                    <h2>Ability</h2>
                     <div>{ability}</div>
                 </div>
                 <div className="group">

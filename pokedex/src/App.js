@@ -17,14 +17,14 @@ const client = axios.create({
 
 function App() {
 
-  const [pokeData, setPokeData] = useState(null)
+  const [pokeData1, setPokeData1] = useState(null)
 
   const randomNumber = Math.floor(Math.random() * 898)
 
   React.useEffect(() => {
       async function getPokemonData() {
           const response = await client.get(`/${randomNumber}`)
-          setPokeData(response.data)
+          setPokeData1(response.data)
           console.log(response.data)
       }
       getPokemonData()
@@ -33,21 +33,21 @@ function App() {
   async function deletePost() {
       await client.delete(`/${randomNumber}`)
       alert("Post Deleted!")
-      setPokeData(null)
+      setPokeData1(null)
   }
 
-  if (!pokeData) return "No Post!"
+  if (!pokeData1) return "No Post!"
 
   return (
     <div className="App">
       <NavBar />
       <main>
         <Routes>
-          <Route path="/" element={<Home pokeData={pokeData}/>} />
-          <Route path="/pokemon/random" element={<Pokemon pokeData={pokeData} />} />
+          <Route path="/" element={<Home pokeData1={pokeData1}/>} />
+          <Route path="/pokemon/random" element={<Pokemon pokeData1={pokeData1} />} />
           <Route path= "/pokemon/search" element={<PkmnSearchPage />} />
           <Route path= "/pokemon/gamelist" element={<PkmnGameList />} />
-          <Route path= "/pokemon/searched" element={<SearchedPkmn  />} />
+          {/* <Route path= "/pokemon/searched" element={<SearchedPkmn  />} /> */}
         </Routes>
       </main>
     </div>
