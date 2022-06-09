@@ -2,12 +2,11 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import RandomPkmnCard from "./RandomPkmnCard";
 import {Link} from "react-router-dom"
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const client = axios.create({
     baseURL: "https://pokeapi.co/api/v2/pokemon/"
 })
-
 
 const Home = ({pokeData}) =>{
 
@@ -31,7 +30,6 @@ const Home = ({pokeData}) =>{
     // }
 
     // if (!pokeData) return "No Post!"
-// Hi jeff
     return(
         <div>
                 <h1>HOME</h1>
@@ -41,7 +39,7 @@ const Home = ({pokeData}) =>{
                     Click the random pokemon below or navigate through the 
                     nav bar to get started exploring. 
                 </p>
-                <Link to='/pokemon/:name'>
+                <Link to='/pokemon/random'>
                 <RandomPkmnCard  pokeData={pokeData}/>
                 </Link>
         </div>

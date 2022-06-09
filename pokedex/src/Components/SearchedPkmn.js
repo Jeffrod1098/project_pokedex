@@ -1,9 +1,8 @@
-import React from "react";
+import React from 'react'
 
+const SearchedPkmn = ({sPokeData}) => {
 
-const Pokemon = ({pokeData}) => {
-
-    const ability = pokeData.abilities.map(poke =>{
+    const ability = sPokeData.abilities.map(poke =>{
         return(
             <>
             <div>{poke.ability.name}</div>
@@ -11,7 +10,7 @@ const Pokemon = ({pokeData}) => {
         )
     })
 
-    const stats = pokeData.stats.map(poke =>{
+    const stats = sPokeData.stats.map(poke =>{
         return(
             <div>{poke.stat.name}:{poke.base_stat}</div>
         )
@@ -20,10 +19,10 @@ const Pokemon = ({pokeData}) => {
 
     return(
         <div>
-            <h1>{pokeData.name}</h1>
+            <h1>{sPokeData.name}</h1>
             {/* <img className="pkmnImg" src={pokeData.sprites.front_default} />  */}
 
-            <img className="pkmnImg" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeData.id}.png`} />
+            <img className="pkmnImg" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${sPokeData.id}.png`} />
 
             <div className="group">
                 <div>
@@ -39,6 +38,7 @@ const Pokemon = ({pokeData}) => {
             </div>
         </div>
     )
-}
+} 
 
-export default Pokemon
+
+export default SearchedPkmn

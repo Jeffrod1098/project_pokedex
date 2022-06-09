@@ -7,7 +7,9 @@ import { Route, Routes } from 'react-router-dom';
 import Pokemon from './Components/Pokemon'
 import PkmnSearchPage from './Components/PkmnSearchPage';
 import PkmnGameList from './Components/PkmnGameList';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import SearchedPkmn from './Components/SearchedPkmn';
+
+
 
 const client = axios.create({
   baseURL: "https://pokeapi.co/api/v2/pokemon/"
@@ -42,9 +44,10 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home pokeData={pokeData}/>} />
-          <Route path="/pokemon/:name" element={<Pokemon pokeData={pokeData} />} />
+          <Route path="/pokemon/random" element={<Pokemon pokeData={pokeData} />} />
           <Route path= "/pokemon/search" element={<PkmnSearchPage />} />
           <Route path= "/pokemon/gamelist" element={<PkmnGameList />} />
+          <Route path= "/pokemon/searched" element={<SearchedPkmn  />} />
         </Routes>
       </main>
     </div>

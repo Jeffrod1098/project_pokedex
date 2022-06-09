@@ -36,3 +36,9 @@ code {
 .pkmnImg{
   margin: 2rem;
 }
+
+
+.game{
+  display: flex;
+  flex-direction:column ;
+}
