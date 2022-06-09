@@ -98,3 +98,31 @@ align-items: baseline;
   width: 600px;
   /* margin-left: 25%; */
 }
+
+.wholePage{
+  display: flex;
+  flex-direction: row;
+}
+
+.sprites{
+  display: flex;
+  margin-left: 40%;
+}
+
+.halfPage{
+width: 50%;
+}
+
+.otherHalfPage{
+width: 50%;
+display: flex;
+flex-direction: column;
+}
+
+.group{
+  background-color: grey;
+  color: white;
+  padding: 0.5rem;
+  font-size: 12px;
+  border-radius: 8px;
+}
