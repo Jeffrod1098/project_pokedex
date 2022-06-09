@@ -10,7 +10,7 @@ const RandomPkmnCard = ({pokeData1}) => {
     return(
         <div>
             <div className="randomCard">
-                <h2>{pokeData1.id}</h2>
+                <h2>#{pokeData1.id}</h2>
                 <img src={pokeData1.sprites.front_default} alt={pokeData1.name} />
                 <h2>{pokeData1.name}</h2>
             </div>

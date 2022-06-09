@@ -21,7 +21,7 @@ code {
 }
 
 .randomCard{
-  width: 300px;
+  width: 450px;
   background-color: rgba(175, 175, 175, 0.933);
   border-radius: 1rem;
   box-shadow: 0 5px 5px rgba(0, 0, 0,0.5 );
@@ -31,6 +31,27 @@ code {
   margin-left: 35% ;
   justify-content: space-between;
   box-sizing: border-box;
+  margin: 45px;
+  color: black;
+}
+
+.randomCard:hover{
+  filter: grayscale(0%) opacity(1);
+  background: gray;
+  width: 430px;
+  transition: 500ms;
+}
+
+.pokeCardContainer{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.home{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .pkmnImg{
@@ -41,4 +62,39 @@ code {
 .game{
   display: flex;
   flex-direction:column ;
+}
+
+
+.gameListContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.keyFeatures{
+display: flex;
+flex-direction: row;
+align-items: baseline;
+}
+
+.releaseDate{
+display: flex;
+flex-direction:row;
+align-items: baseline;
+}
+
+.platform{
+display: flex;
+flex-direction:row;
+align-items: baseline;
+}
+
+.gameImg{
+  width: 350px;
+  align-items: center;
+  /* margin-left: 34%; */
+}
+
+.redGreen{
+  width: 600px;
+  /* margin-left: 25%; */
 }
