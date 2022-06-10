@@ -9,7 +9,8 @@
 
 ![image of project](src/pokemonGamelist/Screen%20Shot%202022-06-10%20at%209.10.53%20AM.png)
 
-
+## Link to deployed site:
+https://jeffseipokedex.netlify.app/ 
 
 
 ## Technology used :
